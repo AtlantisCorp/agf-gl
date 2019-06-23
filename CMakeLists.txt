@@ -11,8 +11,11 @@ file(GLOB agf-gl-heads src/*.h)
 # Creates our library.
 
 add_library(agf-gl ${agf-gl-src})
-
 target_include_directories(agf-gl src)
+
+# Adds our AGF Main library.
+
+add_subdirectory(agf)
 target_link_libraries(agf-gl PUBLIC agf)
 
 # Builds GLFW along with our library. 
